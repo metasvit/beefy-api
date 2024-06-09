@@ -53,6 +53,7 @@ import getStargateOpPrices from './optimism/getStargateOpPrices';
 import getStargateMetisPrices from './metis/getStargateMetisPrices';
 import getStargateBasePrices from './base/getStargateBasePrices';
 import getStargateKavaPrices from './kava/getStargateKavaPrices';
+import getStargateMantlePrices from './mantle/getStargateMantlePrices';
 import getOlpPrices from './optimism/getOlpPrices';
 import getEqualizerStablePrices from './fantom/getEqualizerStablePrices';
 import getThenaStablePrices from './bsc/getThenaStablePrices';
@@ -78,12 +79,11 @@ import getUniswapArbitrumPrices from './arbitrum/getUniswapPositionPrices';
 import getUniswapEthereumPrices from './ethereum/getUniswapPositionPrices';
 import getUniswapEthereumGammaPrices from './ethereum/getUniswapGammaPrices';
 import getGammaBasePrices from './base/getGammaPrices';
-import getQuickGammaPrices from './matic/getQuickGammaPrices';
+import getGammaPolygonPrices from './matic/getGammaPolygonPrices';
 import getChronosStablePrices from './arbitrum/getChronosStablePrices';
 import getQuickGammaZkPrices from './zkevm/getQuickGammaPrices';
 import getFvmStablePrices from './fantom/getFvmStablePrices';
 import getBvmStablePrices from './base/getBvmStablePrices';
-import getRetroGammaPrices from './matic/getRetroGammaPrices';
 import { getQlpZkPrices } from './zkevm/getQlpZkPrices';
 import getUniswapGammaPrices from './optimism/getUniswapGammaPrices';
 import getJoeAutoArbPrices from './arbitrum/getJoeAutoArbPrices';
@@ -145,7 +145,6 @@ export async function getNonAmmPrices(tokenPrices: Record<string, number>): Prom
     getUniswapGammaPrices(tokenPrices),
     getJoeAutoAvaxPrices(tokenPrices),
     getJoeAutoArbPrices(tokenPrices),
-    getRetroGammaPrices(tokenPrices),
     getUniswapArbitrumPrices(tokenPrices),
     getUniswapEthereumPrices(tokenPrices),
     getSoliSnekStablePrices(tokenPrices),
@@ -176,6 +175,7 @@ export async function getNonAmmPrices(tokenPrices: Record<string, number>): Prom
     getStargateEthPrices(tokenPrices),
     getStargateKavaPrices(tokenPrices),
     getStargateLineaPrices(tokenPrices),
+    getStargateMantlePrices(tokenPrices),
     getHopPolyPrices(tokenPrices), // <----
     getHopOpPrices(tokenPrices),
     getHopArbPrices(tokenPrices),
@@ -239,7 +239,7 @@ export async function getNonAmmPrices(tokenPrices: Record<string, number>): Prom
     getSolarbeamPrices(tokenPrices),
     getStellaswapPrices(tokenPrices),
     getBscGammaPrices(tokenPrices),
-    getQuickGammaPrices(tokenPrices),
+    getGammaPolygonPrices(tokenPrices),
     getQuickGammaZkPrices(tokenPrices),
     getChronosStablePrices(tokenPrices),
     getFvmStablePrices(tokenPrices),
