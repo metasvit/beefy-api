@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20.x
+    commands:
+      - yarn install-all
+artifacts:
+  files:
+    - '**/*'
